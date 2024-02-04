@@ -108,7 +108,7 @@ local function Labelx(Text, Font, Size, Button)
 	Label.BackgroundTransparency = 1;
 	Label.TextXAlignment = Enum.TextXAlignment.Left;
 	Label.RichText = true;
-	Label.TextColor3 = Color3.fromRGB(115, 6, 254);
+	Label.TextColor3 = Color3.fromRGB(255, 244, 0);
 	return Label;
 end
 local function Label(Text, Font, Size, Button)
