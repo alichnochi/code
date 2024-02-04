@@ -206,7 +206,6 @@ return {
 			NewLabel.Position = UDim2.new(-1, 20, 0, CalculateBounds(CachedObjects).Y + (Padding * #CachedObjects));
 			if (Title) then
 				local NewTitle = TitleLabel(Title);
-                NewTitle.TextColor3 = library.colors.purple
 				NewTitle.Size = UDim2.new(1, -10, 0, 26);
 				NewTitle.Position = UDim2.fromOffset(10, 0);
 				NewTitle.Parent = NewLabel;
