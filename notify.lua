@@ -100,7 +100,17 @@ local DescriptionSettings = {
 }
 
 local MaxWidth = (Container.AbsoluteSize.X - Padding - DescriptionPadding);
-
+local function Labelx(Text, Font, Size, Button)
+	local Label = Instance.new(string.format("Text%s", Button and "Button" or "Label"));
+	Label.Text = Text;
+	Label.Font = Font;
+	Label.TextSize = Size;
+	Label.BackgroundTransparency = 1;
+	Label.TextXAlignment = Enum.TextXAlignment.Left;
+	Label.RichText = true;
+	Label.TextColor3 = Color3.fromRGB(115, 6, 254);
+	return Label;
+end
 local function Label(Text, Font, Size, Button)
 	local Label = Instance.new(string.format("Text%s", Button and "Button" or "Label"));
 	Label.Text = Text;
@@ -114,7 +124,7 @@ local function Label(Text, Font, Size, Button)
 end
 
 local function TitleLabel(Text)
-	return Label(Text, TitleSettings.Font, TitleSettings.Size);
+	return Labelx(Text, TitleSettings.Font, TitleSettings.Size);
 end
 
 local function DescriptionLabel(Text)
